@@ -5,7 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 		WebDriver driver = BrowserDriver.CHROME.selectDriver();
 		driver.manage().window().maximize();
-		driver.get("http://www.protesting.ru/");
+		driver.get(BrowserDriver.BASEURL);
 		new ScreenShotMaker(driver).makeScreenShot();
 		driver.close();
 		driver.quit();

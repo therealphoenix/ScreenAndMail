@@ -24,14 +24,14 @@ import javax.mail.internet.MimeMultipart;
  */
 public class Mail {
 
-	final String to = "fennya@gmail.com";
-	final String from = "pavelklindziuk@gmail.com";
-	final String username = "fennya@gmail.com";
-	final String password = "breaking";
-	Properties properties;
-	Session session;
-	Message message;
-	MimeMultipart multipart;
+	private final String to = "to";
+	private final String from = "from";
+	private final String username = "username";
+	private final String password = "password";
+	private Properties properties;
+	private Session session;
+	private Message message;
+	private MimeMultipart multipart;
 	String filename;
 	DataSource source;
 
@@ -61,6 +61,7 @@ public class Mail {
 
 			// Files attachment
 			File file = new File("D:/Selenium/");
+			System.out.println("Attaching files:");
 			for (File directoryItem : file.listFiles()) {
 				if (directoryItem.isFile()) {
 					MimeBodyPart messageBodyPart2 = new MimeBodyPart();
@@ -69,7 +70,6 @@ public class Mail {
 					messageBodyPart2.setFileName(directoryItem.getName());
 					messageBodyPart2.setDisposition(MimeBodyPart.INLINE);
 					multipart.addBodyPart(messageBodyPart2);
-					System.out.println("Attaching files:");
 					System.out.println(directoryItem.getName());
 				}
 			}

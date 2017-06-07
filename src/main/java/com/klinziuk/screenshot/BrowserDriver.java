@@ -13,7 +13,7 @@ public enum BrowserDriver {
 	
     CHROME(1);
 
-    public static final String BASEURL = "https://vk.com";
+    public static final String BASEURL = "http://www.protesting.ru/";
     private int index;
     BrowserDriver(int browserIndex) {
         this.index = browserIndex;
