@@ -10,6 +10,6 @@ public class Main {
 		driver.close();
 		driver.quit();
 		BrowserDriver.CHROME.killDriver();
-		new Mail().sendMessage();
+	//	new Mail().sendMessage();
 	}
 }
